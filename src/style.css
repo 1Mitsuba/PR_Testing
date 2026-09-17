@@ -29,3 +29,212 @@ body {
   margin: 0 auto;
   padding: 2rem 1rem;
 }
+
+.seccion {
+  padding: 4rem 0;
+  border-bottom: 1px solid #d9e1e8;
+}
+
+.seccion-encabezado {
+  max-width: 620px;
+  margin-bottom: 2rem;
+}
+
+.etiqueta {
+  margin: 0 0 0.5rem;
+  color: #c2410c;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+h2 {
+  margin: 0;
+  color: #17202a;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  line-height: 1.1;
+}
+
+h3 {
+  color: #17202a;
+}
+
+.servicios-lista,
+.testimonios-lista,
+.precios-lista,
+.equipo-lista {
+  display: grid;
+  gap: 1rem;
+}
+
+.servicios-lista {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.servicio-tarjeta,
+.testimonio,
+.precio-tarjeta,
+.persona {
+  padding: 1.5rem;
+  background: #ffffff;
+  border: 1px solid #d9e1e8;
+  border-radius: 8px;
+}
+
+.servicio-numero {
+  color: #c2410c;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.servicio-tarjeta h3,
+.persona h3 {
+  margin: 2rem 0 0.5rem;
+}
+
+.servicio-tarjeta p,
+.persona p,
+.precio-tarjeta > p:not(.precio) {
+  margin: 0;
+  color: #52606d;
+}
+
+.contacto {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 3rem;
+}
+
+.contacto-formulario {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.contacto-formulario label {
+  display: grid;
+  gap: 0.4rem;
+  color: #17202a;
+  font-weight: 700;
+}
+
+.contacto-formulario input,
+.contacto-formulario textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #b8c4ce;
+  border-radius: 4px;
+  font: inherit;
+}
+
+.campo-completo,
+.contacto-formulario button,
+.formulario-exito {
+  grid-column: 1 / -1;
+}
+
+.contacto-formulario button {
+  width: fit-content;
+  padding: 0.8rem 1.2rem;
+  color: #ffffff;
+  background: #c2410c;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+}
+
+.formulario-exito {
+  margin: 0;
+  color: #166534;
+}
+
+.testimonios-lista,
+.precios-lista,
+.equipo-lista {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.testimonios-lista {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.testimonio {
+  margin: 0;
+}
+
+.testimonio > p {
+  margin-top: 0;
+  color: #17202a;
+  font-size: 1.15rem;
+  line-height: 1.5;
+}
+
+.testimonio footer {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.testimonio footer span {
+  color: #52606d;
+  font-size: 0.9rem;
+}
+
+.precio-tarjeta {
+  position: relative;
+}
+
+.precio-tarjeta.destacado {
+  border: 2px solid #c2410c;
+}
+
+.precio-etiqueta {
+  color: #c2410c;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.precio {
+  margin: 1rem 0 0.25rem;
+  color: #17202a;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.precio-tarjeta ul {
+  padding-left: 1.1rem;
+  color: #52606d;
+  line-height: 2;
+}
+
+.persona-iniciales {
+  display: grid;
+  width: 3.5rem;
+  height: 3.5rem;
+  place-items: center;
+  color: #ffffff;
+  background: #1e3a8a;
+  border-radius: 50%;
+  font-weight: 700;
+}
+
+@media (max-width: 760px) {
+  .seccion {
+    padding: 3rem 0;
+  }
+
+  .servicios-lista,
+  .precios-lista,
+  .equipo-lista,
+  .testimonios-lista,
+  .contacto {
+    grid-template-columns: 1fr;
+  }
+
+  .contacto-formulario {
+    grid-template-columns: 1fr;
+  }
+}
